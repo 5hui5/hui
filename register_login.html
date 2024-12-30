@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="stytee.css"> <!-- 引入外部CSS文件 -->
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="pageTitle">小米 - 用户注册/登录</h2>
+        <form id="userForm">
+            <div class="input-group">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" id="submitButton">注册</button>
+            <p id="toggleLink">已有账号？<a href="#">登录</a></p>
+            <p id="forgotPassword"><a href="signup.html" id="forgotPasswordLink">忘记密码？</a></p>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

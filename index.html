@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>untitled-1</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+         .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* 模态框内容样式 */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* 关闭按钮样式 */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        * {
+            box-sizing: border-box;
+            
+        }
+        
+        body, html {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background-color: black;
+        }
+        .a1 a:hover {
+    color: blue;
+}
+   
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #c5bfbf;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+           
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 24px;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        
+        .search-login {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .login-signup a {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        
+        .login-signup a:last-child {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px; 
+        }
+        
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+
+        }
+        
+        .st1 {
+            width: 300px;
+            height: 400px; 
+            margin: 200px 50px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+<style>
+    .image-hover-text {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        height: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .st1 {
+        position: relative; /* Ensure the text is positioned relative to the image */
+    }
+</style>
+</head>
+<body>
+ <header>
+        <div class="navbar">
+            <div class="logo">CS2</div>
+            <div class="menu">
+                <a href="game.html">Games</a>
+                <a href="show.html">Players</a>
+                <!-- ... other menu items ... -->
+            </div>
+            <div class="search-login">
+                <div class="search">
+                    <input type="text" placeholder="Search" style=" border-radius: 4px;">
+                </div>
+                <div id="user-status" class="register">
+                    <span id="username-display"></span>
+                    <a href="#" id="register-link">注册</a>
+                    <a href="#" id="login-link">登录</a>
+                    <a href="#" id="logout-link" style="display:none;">注销</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="registrationModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <h2 id="pageTitle">用户注册/登录</h2>
+            <form id="userForm">
+                <div class="input-group" >
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">密码:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" id="submitButton">注册</button>
+                <p id="toggleLink">已有账号？<a href="#">登录</a></p>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+    <section>
+        <div class="flex" style=" height: 600px; width: 80%;">
+        <video width=100% height=100% autoplay muted loop>
+            <source src="vido1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+          <div class="flex" style="background-color: #6d7279; height: 10px; width: 100%;"></div>
+          <div class="flex" style="background-color: #007bff; height: 90px; width: 50%;">
+            <img src="guodu.jfif" alt="guodu">
+          </div>
+          <br>
+          <br>
+          <br>
+          <span style="color: aliceblue;font-size: 30px;">内容介绍</span>
+        <div class="flex-row">
+            <div class="st1 flex">
+               <a href="game.html"> <img src="map.jpg" alt="游戏介绍"></a>
+            </div>
+            <div class="st1 flex">
+             <a href="show.html">   <img src="palyer.jpg" alt="玩家数据"></a> 
+            </div>
+            
+        </div>
+    </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var images = document.querySelectorAll('.st1 img');
+        
+        images.forEach(function(img) {
+            var textDiv = document.createElement('div');
+            textDiv.className = 'image-hover-text';
+            textDiv.textContent = img.getAttribute('alt'); 
+            img.parentNode.appendChild(textDiv);
+            
+      
+            img.parentNode.addEventListener('mouseover', function() {
+                textDiv.style.display = 'block';
+            });
+            
+        
+            img.parentNode.addEventListener('mouseout', function() {
+                textDiv.style.display = 'none';
+            });
+        });
+    });
+    
+</script>
+<script>
+    // Function to show the registration/login modal
+    function showModal() {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+
+    // Function to hide the registration/login modal
+    function hideModal() {
+        document.getElementById('registrationModal').style.display = 'none';
+        document.getElementById('userForm').reset();
+    }
+
+    // Function to simulate logout
+    function logout() {
+        // Implement logout logic here
+        document.getElementById('logout-link').style.display = 'none';
+        document.getElementById('register-link').style.display = 'inline';
+        document.getElementById('login-link').style.display = 'inline';
+    }
+
+    // Function to toggle between register and login
+    function toggleForm() {
+        var pageTitle = document.getElementById('pageTitle').textContent;
+        if (pageTitle === '用户注册') {
+            document.getElementById('pageTitle').textContent = '用户登录';
+            document.getElementById('submitButton').textContent = '登录';
+            document.getElementById('toggleLink').style.display = 'none';
+        } else {
+            document.getElementById('pageTitle').textContent = '用户注册';
+            document.getElementById('submitButton').textContent = '注册';
+            document.getElementById('toggleLink').style.display = 'block';
+        }
+    }
+
+    // Function to check login status
+    function checkLoginStatus() {
+        // Implement login status check logic here
+        // For demonstration, let's assume the user is not logged in
+        document.getElementById('logout-link').style.display = 'none';
+        document.getElementById('register-link').style.display = 'inline';
+        document.getElementById('login-link').style.display = 'inline';
+    }
+
+    // Function to handle form submission
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var pageTitle = document.getElementById('pageTitle').textContent;
+
+        // Validate form fields
+        if (!username || !password) {
+            document.getElementById('message').textContent = '用户名和密码不能为空。';
+            return;
+        }
+
+        try {
+            // Here you would typically send the data to a server
+            // For demonstration, we'll just simulate a successful submission
+            document.getElementById('message').textContent = pageTitle === '用户注册' ? '注册成功！' : '登录成功！';
+            hideModal();
+            // Update UI to reflect logged-in state
+            document.getElementById('logout-link').style.display = 'inline';
+            document.getElementById('register-link').style.display = 'none';
+            document.getElementById('login-link').style.display = 'none';
+        } catch (error) {
+            // Handle any errors that occurred during submission
+            document.getElementById('message').textContent = '发生错误：' + error.message;
+        }
+    }
+
+    // Event listeners for navigation bar links
+    document.getElementById('register-link').addEventListener('click', function() {
+        toggleForm();
+        showModal();
+    });
+    document.getElementById('login-link').addEventListener('click', function() {
+        toggleForm();
+        showModal();
+    });
+    document.getElementById('logout-link').addEventListener('click', logout);
+
+    // Event listener for the toggle link
+    document.getElementById('toggleLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        toggleForm();
+        document.getElementById('userForm').reset();
+    });
+
+    // Form submission event listener
+    document.getElementById('userForm').addEventListener('submit', handleFormSubmit);
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('registrationModal')) {
+            hideModal();
+        }
+    }
+
+    // Page load event listener
+    window.onload = checkLoginStatus;
+</script>
+</body>
+</html>

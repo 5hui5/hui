@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>        
+</head>
+<style>
+  
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            position: relative; 
+        }
+
+        #text-layer {
+            position: absolute; 
+      bottom: 0; 
+       right: 0;
+      margin: 0; 
+       width: 30%; 
+        height: auto;             
+            background: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-size: 2em; 
+            padding: 10px;          
+        }
+        .return-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #0f110f; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px; 
+            left: 10px; 
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+            transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+        .return-button:hover {
+            background-color: #bedabf; 
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3); 
+        }
+        #popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        background-color: white;
+        z-index: 1001;
+        display: none; /* Initially hidden */
+    }
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1000;
+        display: none; /* Initially hidden */
+    }
+    #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+<body  onload="mymessage()">
+    <button class="return-button"><a href="index.html">返回</a></button>
+    <img src="cs2.jpg" style="width: 100%; height: 100vh">
+    
+    <div id="text-layer">
+        《反恐精英2》（《Counter-Strike 2》）是由Valve公司开发并发行的一款在线射击游戏，前作为《反恐精英：全球攻势》，采用起源2（Source2）引擎，于2023年9月28日正式发行，支持Steam平台（国际）和完美世界平台（中国大陆）
+    </div>
+    <div id="overlay" ></div>
+<div id="popup" style="width: 1024px;height: 590px;">
+    
+    <span id="close-btn" onclick="closePopup()" style="width: 10px;height: 10px;"><strong ></strong></span>
+    <div class="carousel-container">
+        
+        <div class="carousel-slide active">
+          <img src="steam.png" alt="Image 1" style="width:100%;">
+        </div>
+    
+        <div class="carousel-slide">
+          <img src="123.jpeg" alt="Image 3" style="width:100%;">
+        </div>
+        
+      </div>
+    <p style="margin: auto;font-size: 24px; ">请给我的战队投票↑<strong id="djs"></strong></p>
+</div>
+
+</body>
+<script>
+   
+    window.onload = function() {
+        var countdownElementq = document.getElementById('djs');
+        var countdownElement1 = document.getElementById('close-btn');
+    var endTime = new Date().getTime() + 10000; // 设置倒计时结束时间为当前时间后的60秒
+
+   
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = endTime - now;
+
+      
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        
+        countdownElementq.innerHTML = minutes + "m " + seconds + "s ";
+     
+
+        
+        if (distance < 0) {
+            clearInterval(x);
+            countdownElement1.innerHTML = "X";
+            countdownElementq.innerHTML = "关闭";
+        }
+    }, 1000);
+        
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    };
+    function closePopup() {
+       
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("carousel-slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); 
+}
+  
+</script>
+</html>
+

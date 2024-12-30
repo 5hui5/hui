@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>untitled-1</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .bo {
+      border: 1px solid black;
+      
+    }
+    p{
+      font-family: "Montserrat", sans-serif;
+      font-size: 25px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 250vh;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-l {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .flex-gap {
+      flex: 0 0 30px;
+    }
+
+    section {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 250vh;
+      width: 130vh;
+      margin: auto;
+    }
+
+    .b1 {
+      background-color: #416988;
+      color: white;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      margin: 3px 2px;
+    }
+
+    .a1 a:hover {
+      color: blue;
+    }
+
+    header {
+
+      position: fixed;
+      top: 0;
+      height: 50px;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+
+      background-color: #d2c7c7;
+
+    }
+
+    .row {
+      flex-direction: row;
+      justify-content: center;
+
+    }
+
+    .mg {
+      margin: auto;
+      background-color: white;
+    }
+
+    .flex-gap1 {
+      flex: 0 0 10px
+    }
+    #back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* 默认不显示 */
+  z-index: 1000;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 返回首页按钮的样式 */
+#back-to-home {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+
+  
+  <section class="flex flex-l">
+    </div>
+
+
+    </div>
+
+    <div class="flex bo" style="  flex: 0.5;"><strong style="font-size: 30px; margin: auto;">玩家数据</strong></div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="请输入搜索内容" class="search-input">
+      <button id="search-button" class="search-button">搜索</button>
+  </div>
+  
+  <div id="search-results" class="search-results"></div>
+    
+
+    <div class="flex flex-l" style="  flex: 10;  ">
+      <div class="flex-gap1"></div>
+      <div class="flex" style="flex: 1; ">
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div  class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="cs2.jpg" alt="1" >
+          </div>
+          <div class=" flex mg " style=" height: 60px;width: 100%;">
+            
+            <p style="margin: auto;"><strong>demo</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg"onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="default.jpg" alt="2">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>黄烨C</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="default (1).jpg" alt="3">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>寻欢客</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="default (2).jpg" alt="4">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>求淇啦</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+      </div>
+      <div class="flex-gap1"></div>
+      <div class="flex" style="flex: 1;">
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="default (3).jpg" alt="5">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>苏泽</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="default (4).jpg" alt="6">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>水尽云起</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="a梦.jpg" alt="7">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>无人之境</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="diwang铠甲.jpg" alt="8">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>白玫瑰</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+      </div>
+      <div class="flex-gap1"></div>
+      <div class="flex" style="flex: 1;">
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="gang tiexia.jpg" alt="9">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>请叫我小贱贱</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="haimian宝宝.jpg" alt="10">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>把臂看风景</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="meiguo队长.jpg" alt="11">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>何来尘埃飞舞</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+        <div class="flex mg flex-l bo" style=" height: 390px;width: 270px;  ">
+
+          <div class="image-container mg" onmouseover="mOver(this)" onmouseout="mOut(this)" style="border-radius: 50%;">
+            <img src="yanlong铠甲.jpg" alt="12">
+          </div>
+          <div class=" flex mg" style="height: 60px;width: 100%;">
+            <p style="margin: auto;"><strong>是时候拿鲜花</strong></p>
+          </div>
+        </div>
+        <div class="flex-gap1"></div>
+      </div>
+      <div class="flex-gap1"></div>
+
+    </div>
+    <div class="flex-gap"></div>
+    <button id="back-to-home" onclick="homeFunction()">返回首页</button>
+
+<!-- 页面内容 -->
+<div style="height:2000px;">
+  <h1>向下滚动，然后点击右侧的按钮返回顶部。</h1>
+</div>
+
+<!-- 返回顶部按钮 -->
+<button id="back-to-top" onclick="topFunction()">返回顶部</button>
+  
+<script>
+function mOver(obj) {
+    obj.style.borderRadius = "0px"; // 移除圆角效果
+}
+function mOut(obj) {
+    obj.style.borderRadius = "50%"; // 恢复圆角效果
+}
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("back-to-top").style.display = "block";
+  } else {
+    document.getElementById("back-to-top").style.display = "none";
+  }
+};
+
+// 点击返回顶部按钮时滚动到页面顶部
+function topFunction() {
+  document.body.scrollTop = 0; // 对于Safari
+  document.documentElement.scrollTop = 0; // 对于Chrome、Firefox、IE和Opera
+}
+
+// 点击返回首页按钮时跳转到首页
+function homeFunction() {
+  window.location.href = '/'; // 将'/'替换为您的首页URL
+}
+</script>
+</body>
+
+</html>

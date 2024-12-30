@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        *{
+            border: black solid 1px;
+        }
+        .flexc{
+          
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            align-content: space-between;
+            flex-wrap: wrap;
+
+        }
+        .flexp{
+          
+          display: flex;
+          flex-direction:row;
+          justify-content: center;
+          align-items: center;
+         
+          flex-wrap: wrap;
+
+      }
+        .flex{
+            display: flex;
+        }
+        body{
+            height: 100vh;
+        }
+        .mg{margin: auto; 
+            background-color: white;}
+            .image-container {
+    width: 230px;
+    height: 230px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+    display: flex;
+   
+   
+}
+.flex-l{
+    flex-direction: column;
+justify-content: center;
+    }
+</style>
+
+
+    </style>
+</head>
+<body>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        .home-button:hover {
+            background-color: darkblue; /* Change background color on hover */
+        }
+        .home-button:active {
+            background-color: lightblue; /* Change background color on click */
+        }
+    </style>
+    <a href="index.html" class="home-button">回到首页</a>
+
+
+    
+<section class="flexc" style="height: 100%;width: 100%;">
+    <div class="flex" style="height: 40vh; width: 60%;">
+        <div class="flex flex-l"  style="height: 100%;width: 30%;">
+            <div class="image-container mg" >
+                <img src="cs2.jpg" alt="1">
+              </div> 
+              <div class=" flex mg" style=" height: 60px;width: 100%;">
+                <p style="margin: auto;"><strong>丽丽</strong></p>
+              </div>
+        </div>
+        <div class="flexxp" style="  width: 70%; height: 100%;">
+           <div style="width: 100%;"><p><strong>Team:</strong> Team Spirit</p></div> 
+           <div  style="width: 100%;"><p><strong>Country:</strong> Russia</p></div> 
+            <div  style="width: 100%;"><p><strong>Name:</strong> Danil Kryshkovets</p></div> 
+                <div  style="width: 100%;"><p><strong>Birthday:</strong> January 25, 2007</p></div> 
+        </div>
+
+
+    </div>
+    <div class="flex flex-l" style="height: 55vh;width: 60%;">
+        <div class="flex" style="width: 100%; height: 30%; ">
+            <div style="width: 50%;"><p><strong>Rating:</strong> &nbsp;&nbsp;Team Spirit 
+                <P><strong>Kpr:</strong> &nbsp;&nbsp;Team Spirit
+            </P></div> 
+            <div style="width: 50%;"><p><strong>Rws:</strong> &nbsp;&nbsp;Team Spirit</p>
+                <P><strong>Impact:</strong> &nbsp;&nbsp;Team Spirit
+                </P></div> 
+            <div style="width: 50%;"><p><strong>Adr:</strong> &nbsp;&nbsp;Team Spirit</p>
+                <P><strong>Surviving:</strong> &nbsp;&nbsp;Team Spirit
+                </P></div> 
+        </div>
+        <div class="flex" style="width: 100%; height: 70%; ">
+            
+        </div>
+    </div>
+   
+</section>
+    
+</body>
+</html>

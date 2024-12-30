@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f9fc;
+  }
+
+  .container {
+    width: 60%;
+    height: 40vh;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+  }
+
+  .profile-image {
+    flex-shrink: 0;
+    width: 50%;
+    background-color: lightgray;
+  }
+
+  .profile-info {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    stroke-width: 2;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="profile-image"></div>
+  <div class="profile-info">
+    <h2>donk</h2>
+    <p><strong>Team:</strong> Team Spirit</p>
+    <p><strong>Country:</strong> Russia</p>
+    <p><strong>Name:</strong> Danil Kryshkovets</p>
+    <p><strong>Birthday:</strong> January 25, 2007</p>
+    <div class="social-icons">
+      
